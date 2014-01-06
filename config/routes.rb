@@ -1,6 +1,7 @@
 Combinator::Application.routes.draw do
   root :to => "pages#landing"
-  get "results" => "flights#results", :as => :flight_results
+
+  get "flights" => "flights#results", :as => :flight_results
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
