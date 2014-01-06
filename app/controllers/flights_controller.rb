@@ -1,17 +1,19 @@
 class FlightsController < ApplicationController
   def results
-    flights = []
-    departure_airports.each do |dep_ap|
-      destination_airports.each do |des_ap|
-        next if dep_ap == des_ap
-        conn = faraday_connection(dep_ap.code)
-        params_to_send = default_params(dep_ap.id, des_ap.id)
-        raw_results = conn.get "/filter", params_to_send
-        results = JSON.parse(raw_results.body)
-        flights << results["flights"] if results["flights"].any?
+    respond_to do |format|
+      flights = []
+      departure_airports.each do |dep_ap|
+        destination_airports.each do |des_ap|
+          next if dep_ap == des_ap
+          conn = faraday_connection(dep_ap.code)
+          params_to_send = default_params(dep_ap.id, des_ap.id)
+          raw_results = conn.get "/filter", params_to_send
+          results = JSON.parse(raw_results.body)
+          flights << results["flights"] if results["flights"].any?
+        end
       end
+      format.json { render :json => { :results => render_to_string('_results.haml', :locals => { :flights => flights.flatten }) } }
     end
-    @flights = flights.flatten
   end
 
   private
