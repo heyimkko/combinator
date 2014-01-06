@@ -1,0 +1,46 @@
+@mixin box-sizing(){
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.4em;
+  line-height: 2em;
+  background-color: #f5f5f5;
+  color: #444;
+  font-family: 'Lato';
+  font-weight: 300;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+}
+
+p {
+  color: #444;
+}
+
+#wrapper {
+  margin: auto;
+  width: 100%;
+  max-width: 960px;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}

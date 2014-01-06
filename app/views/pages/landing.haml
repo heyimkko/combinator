@@ -1,7 +1,14 @@
-%h1
-  When do you want to get away?
+#landing
+  .container
+    #hero
+      %h1
+        Combine flight deals with hotel getaway packages.
+      %h2
+        Save up to 60% off entire vacations.
 
-%div
-  %input{:placeholder => "mm/dd/yy"}
-  %span
-    | *We only leave from SFO and LAX
+    #query
+      %h2
+        Let's start your adventure. Choose a date:
+      %input{:placeholder => "mm/dd/yy", id: "input"}
+      #asterisk
+        *Currently only supporting SFO and LAX departures.
