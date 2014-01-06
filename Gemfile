@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'faraday'
+gem 'haml'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '3.2.16'
-gem 'slim'
 
 group :development do
   gem 'better_errors'
