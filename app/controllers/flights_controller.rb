@@ -1,10 +1,10 @@
 class FlightsController < ApplicationController
   def results
     flights = []
-    departure_airports.each do |departure_code, departure_id|
-      destination_airports.each do |destination_code, destination_id|
-        conn = faraday_connection(departure_code)
-        params_to_send = default_params(departure_id, destination_id)
+    departure_airports.each do |dep_ap|
+      destination_airports.each do |des_ap|
+        conn = faraday_connection(dep_ap.code)
+        params_to_send = default_params(dep_ap.id, des_ap.id)
         raw_results = conn.get "/filter", params_to_send
         results = JSON.parse(raw_results.body)
         flights << results["flights"] if results["flights"].any?
@@ -40,21 +40,19 @@ class FlightsController < ApplicationController
   end
 
   def departure_airports
-    # hash values are airport ids as specified in FlyShortcut API
-    {
-      "LAX" => 620,
-      "SFO" => 924
-    }
+    [
+      Airport.find_by_code("LAX"),
+      Airport.find_by_code("SFO")
+    ]
   end
 
   def destination_airports
-    # hash values are airport ids as specified in FlyShortcut API
-    {
-      "LAS" => 590,
-      "LAX" => 620,
-      "PDX" => 828,
-      "SAN" => 923,
-      "SFO" => 924
-    }
+    [
+      Airport.find_by_code("LAS"),
+      Airport.find_by_code("LAX"),
+      Airport.find_by_code("PDX"),
+      Airport.find_by_code("SAN"),
+      Airport.find_by_code("SFO")
+    ]
   end
 end
