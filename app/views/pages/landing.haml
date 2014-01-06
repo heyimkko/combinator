@@ -12,3 +12,8 @@
       %input{:placeholder => "mm/dd/yy", id: "input"}
       #asterisk
         *Currently only supporting SFO and LAX departures.
+
+    %button#search-button{"data-flight-results-url" => "#{flight_results_path}"}
+      Search
+
+%div.results
