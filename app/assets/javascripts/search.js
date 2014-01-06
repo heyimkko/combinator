@@ -3,8 +3,8 @@ $(document).ready(function() {
     callFlyShortcut($(this))
   });
 
-  var callFlyShortcut = function(this)  {
-    var url = this.attr("data-flight-results-url");
+  var callFlyShortcut = function(ele)  {
+    var url = ele.attr("data-flight-results-url");
     $.ajax({
       url: url
     })
