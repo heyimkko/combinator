@@ -4,6 +4,7 @@ gem 'faraday'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '3.2.16'
+gem 'slim'
 
 group :development do
   gem 'better_errors'
