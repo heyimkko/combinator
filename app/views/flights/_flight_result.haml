@@ -1,21 +1,21 @@
-ruby:
+:ruby
   dep_ap = Airport.find(flight["departure_airport_id"])
   des_ap = Airport.find(flight["arrival_airport_id"])
   dep_time = DateTime.strptime(flight["departure_time"], "%Y-%m-%dT%H:%M:%S")
   des_time = DateTime.strptime(flight["arrival_time"], "%Y-%m-%dT%H:%M:%S")
 
-div
+%div
   = "From #{dep_ap.name} to #{des_ap.name}"
-div
+%div
   = "Shortcut destination: #{Airport.find(flight['second_flight_destination']).name}"
-div
+%div
   = "Leaving on #{dep_time.strftime('%B %d, %Y')} at #{dep_time.strftime('%H:%M')}"
-div
+%div
   = "Arriving on #{des_time.strftime('%B %d, %Y')} at #{des_time.strftime('%H:%M')}"
-div
+%div
   = "Airline: #{flight['airline']} - Flight no: #{flight['flight_no']}"
-div
+%div
   = "#{flight['airline']}, flight: #{flight['flight_no']}"
-div
+%div
   = "Price: #{number_to_currency(flight['price'].to_f / 100)}"
-br
+%br

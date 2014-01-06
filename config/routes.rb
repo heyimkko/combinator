@@ -1,5 +1,5 @@
 Combinator::Application.routes.draw do
-  resources :flights, :only => [:index]
+  root "pages#landing"
   get "results" => "flights#results", :as => :results
 
   # The priority is based upon order of creation:
