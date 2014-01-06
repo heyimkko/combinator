@@ -3,6 +3,7 @@ class FlightsController < ApplicationController
     flights = []
     departure_airports.each do |dep_ap|
       destination_airports.each do |des_ap|
+        next if dep_ap == des_ap
         conn = faraday_connection(dep_ap.code)
         params_to_send = default_params(dep_ap.id, des_ap.id)
         raw_results = conn.get "/filter", params_to_send
