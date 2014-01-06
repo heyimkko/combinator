@@ -1,8 +1,7 @@
-h1
-  | Results
-p
+%h1 Results
+%p
   = "#{@flights.count} results"
 
 - @flights.each do |flight|
-  div
+  %div
     = render "flight_result", :flight => flight
