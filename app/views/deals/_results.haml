@@ -1,0 +1,7 @@
+%h1 Deal results
+%p
+  = "#{deals.count} results"
+
+- deals.each do |deal|
+  %div
+    = render "deal_result", :deal => deal

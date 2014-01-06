@@ -4,4 +4,9 @@
 %div
   %input{:placeholder => "mm/dd/yy"}
   %span
-    | *We only leave from SFO and LAX
+    *We only leave from SFO and LAX
+
+%button#search-button{"data-flight-results-url" => "#{flight_results_path}"}
+  Search
+
+%div.results
