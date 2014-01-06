@@ -3,6 +3,8 @@ Combinator::Application.routes.draw do
 
   get "flights" => "flights#results", :as => :flight_results
 
+  get "deals" => "deals#results", :as => :deal_results
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

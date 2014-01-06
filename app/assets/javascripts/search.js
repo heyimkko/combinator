@@ -10,6 +10,16 @@ $(document).ready(function() {
     })
     .done(function(data) {
       $(".results").after(data.results);
+      callGroupon()
+    });
+  }
+
+  var callGroupon = function()  {
+    $.ajax({
+      url: "/deals"
+    })
+    .done(function(data) {
+      $(".results").after(data.results);
     });
   }
 });
