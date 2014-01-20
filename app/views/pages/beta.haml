@@ -1,40 +1,66 @@
 #beta
   #results_wrapper
-    %h1 One Adventure Found!
+    #flash
+      Note: This is a static sample page and not based on your previous input. Full implementation coming soon.
+    %br
+    %h1 Available Adventures: (1)
     .result
+
       .result_details
-        %h3 At a Glance:
-        .details_left
+        %h3 Dallas:
+        = image_tag "http://i.imgur.com/mvJtNaM.jpg"
+        %p 
+          Fly from 
+          %strong San Francisco 
+          to 
+          %strong Dallas 
+          for 
+          %strong $90 
+          and vacation at 
+          %strong Wyndham Dallas Park Central Hotel 
+          for
+          %strong $74/night
+          %br
+          %br
+          %br
           %p 
-            Fly from 
-            %strong San Francisco 
-            to 
-            %strong Dallas 
-            for 
-            %strong $90 
-            and vacation at 
-            %strong Wyndham Dallas Park Central Hotel 
-            for
-            %strong $74/night
-            %br
-            %br
-            %br
-            %p 
-              Flight savings: 
-              %strong 24% off ($28)
-            %p 
-              Hotel savings: 
-              %strong 34% off
-        .details_right
-          = image_tag "http://i.imgur.com/mvJtNaM.jpg"
-          .right.small Dallas, TX
-        .clearfloat
-      .step
-        %h3 Step 1:
-        See more details and book your hotel here:
-        = link_to "LivingSocial ->", "https://www.livingsocial.com/escapes/properties/50439-wyndham-dallas-suites-park-central", target: "_blank"
-      .step
-        %h3 Step 2:
-        Book your flight here:
-        = link_to "Travelocity ->", "http://travel.travelocity.ca/flights/InitialSearch.do?Service=TRAVELOCITY&last_pgd_page=ushpnbff.pgd&entryPoint=FD&pkg_type=fh_pkg&flightType=oneway&dateFormat=mm%2Fdd%2Fyyyy&subnav=form-fow&leavingFrom=SFO&goingTo=AUS&dateTypeSelect=exactDates&leavingDate=02%2F15%2F2014&dateLeavingTime=Anytime&departDateFlexibility=3&returningDate=mm%2Fdd%2Fyyyy&dateReturningTime=Anytime&returnDateFlexibility=3&adults=1&children=0&seniors=0&minorsAge0=%3F&minorsAge1=%3F&minorsAge2=%3F&minorsAge3=%3F&minorsAge4=%3F", target: "_blank"
-        %p Note: The destination airport in the provided link intentionally does not match your intended destination. Instead, your destination is simply the leg in-between, and so you should not take the final leg. 
+            Flight savings: 
+            %strong 24% off
+          %p 
+            Hotel savings: 
+            %strong 34% off
+          %p
+            Expected Package Cost For 2:
+            %strong $508*
+
+      .steps
+        .step
+          %h3 Step 1:
+          See more details and book your hotel here:
+          = link_to "https://www.livingsocial.com/escapes/properties/50439-wyndham-dallas-suites-park-central", target: "_blank" do
+            LivingSocial
+            %i.icon-link-ext
+        .step
+          %h3 Step 2:
+          Book your departing flight here:
+          = link_to "http://travel.travelocity.ca/flights/InitialSearch.do?Service=TRAVELOCITY&last_pgd_page=ushpnbff.pgd&entryPoint=FD&pkg_type=fh_pkg&flightType=oneway&dateFormat=mm%2Fdd%2Fyyyy&subnav=form-fow&leavingFrom=SFO&goingTo=AUS&dateTypeSelect=exactDates&leavingDate=02%2F15%2F2014&dateLeavingTime=Anytime&departDateFlexibility=3&returningDate=mm%2Fdd%2Fyyyy&dateReturningTime=Anytime&returnDateFlexibility=3&adults=1&children=0&seniors=0&minorsAge0=%3F&minorsAge1=%3F&minorsAge2=%3F&minorsAge3=%3F&minorsAge4=%3F", target: "_blank" do
+            Travelocity
+            %i.icon-link-ext
+          %p.small 
+            Note: The destination airport in the provided link intentionally does not match your intended destination. Instead, your destination is simply the leg in-between, and so you should not take the final leg. 
+            = link_to "Read More", help_path
+        .step
+          %h3 Step 3:
+          Book your return flight here:
+          %p
+            Travelocity
+            %i.icon-link-ext
+      .clearfloat
+
+:javascript 
+  $('#flash').hide();
+
+  setTimeout(function() {
+    $('#flash').css("color", "red");
+    $('#flash').fadeIn(600);
+  }, 3000);

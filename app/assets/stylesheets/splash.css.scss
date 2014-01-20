@@ -4,6 +4,7 @@
   background: url('http://i.imgur.com/frJI8ws.jpg') no-repeat center; 
   min-height: 768px;
   height: 100%;
+  margin-bottom: 40px;
 
   #hero {
     padding: 20% 0 5% 0;
@@ -83,6 +84,15 @@
       cursor: pointer;
       background: #FF5000;
     }
+  }
+}
+
+#how {
+  display: block;
+  padding-bottom: 70px;
+
+  h1 {
+    font-family: 'Playfair Display';
   }
 }
 

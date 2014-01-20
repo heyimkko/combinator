@@ -33,6 +33,14 @@ p {
   color: #444;
 }
 
+a {
+  color: #e67e22;
+  text-decoration: none;
+  &:hover {
+    color: #d35400;
+  }
+}
+
 #wrapper {
   margin: auto;
   width: 100%;
@@ -43,4 +51,22 @@ p {
   width: 100%;
   max-width: 960px;
   margin: auto;
+}
+
+
+.clearfloat {
+  clear: left;
+}
+
+.small {
+  font-size: 0.7em;
+}
+
+.right {
+  text-align: right;
+}
+
+.italics {
+  display: inline;
+  font-style: italic;
 }

@@ -9,8 +9,9 @@
   width: 100%;
   line-height: 1.4em;
 
-  h1, h3 {
-    font-family: 'Playfair Display';
+  h1 {
+    font-family: 'PT Sans Narrow';
+    margin-bottom: 20px;
   }
 
   h3 {
@@ -33,40 +34,27 @@
       font-family: 'Lato';
       font-weight: 300;
     }
+  }
 
-    .result_details {
-      padding: 20px;
-      background-color: #FEE6BA;
-      margin: 20px 0;
+  .result_details {
+    float: left;
+    display: inline-block;
+    width: 100%;
+    max-width: 540px;
+    padding: 10px 0;
+  }
 
-      .details_left {
-        width: 60%;
-        display: inline-block;
-        float: left;
-        padding-right: 10px;
-      }
-
-      .details_right {
-        padding-left: 10px;
-        display: inline-block;
-        float: left;
-      }
-    }
+  .steps{
+    float: left;
+    width: 100%;
+    max-width: 320px;
+    display: inline-block;
+    background-color: #AAC9C0;
+    padding: 10px;
+    height: 100%;
 
     .step {
       margin-bottom: 20px;
     }
   }
-}
-
-.clearfloat {
-  clear: left;
-}
-
-.small {
-  font-size: 0.7em;
-}
-
-.right {
-  text-align: right;
 }
