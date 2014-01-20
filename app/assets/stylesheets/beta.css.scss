@@ -1,0 +1,72 @@
+#beta {
+  font-size: 0.8em;
+  position: absolute;
+  display: block;
+  background-color: #FE9D0D;
+  min-height: 100%;
+  margin: auto;
+  padding-top: 2%;
+  width: 100%;
+  line-height: 1.4em;
+
+  h1, h3 {
+    font-family: 'Playfair Display';
+  }
+
+  h3 {
+    font-family: 'PT Sans Narrow';
+    font-size: 1.4em;
+  }
+
+  #results_wrapper {
+    margin: auto;
+    display: block;
+    width: 90%;
+    height: 80%;
+    min-width: 320px;
+    max-width: 960px;
+    background-color: #f5f5f5;
+    padding: 4%;
+    font-weight: 300;
+
+    p {
+      font-family: 'Lato';
+      font-weight: 300;
+    }
+
+    .result_details {
+      padding: 20px;
+      background-color: #FEE6BA;
+      margin: 20px 0;
+
+      .details_left {
+        width: 60%;
+        display: inline-block;
+        float: left;
+        padding-right: 10px;
+      }
+
+      .details_right {
+        padding-left: 10px;
+        display: inline-block;
+        float: left;
+      }
+    }
+
+    .step {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.clearfloat {
+  clear: left;
+}
+
+.small {
+  font-size: 0.7em;
+}
+
+.right {
+  text-align: right;
+}
