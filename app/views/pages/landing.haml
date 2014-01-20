@@ -4,16 +4,18 @@
       %h1
         Combine flight deals with hotel getaway packages.
       %h2
-        Go on vacation this weekend at a 60% the normal cost.
+        Go on vacation this weekend at 60% the normal cost.
 
     #query
       %h2
         Let's start your adventure. Choose a date:
-      %input{:placeholder => "mm/dd/yy", id: "input"}
+      = form_tag('/beta')
+      = text_field_tag "date", nil, placeholder: "mm/dd (ex: 03/15)", id: "input"
+      = submit_tag "Go!"
       #asterisk
         *Currently only supporting SFO and LAX departures.
 
-    %button#search-button{"data-flight-results-url" => "#{flight_results_path}"}
-      Search
+    / %button#search-button{"data-flight-results-url" => "#{flight_results_path}"}
+    /   Search
 
 %div.results
