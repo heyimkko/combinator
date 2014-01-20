@@ -4,6 +4,7 @@ Combinator::Application.routes.draw do
   get "flights" => "flights#results", :as => :flight_results
   get "deals" => "deals#results", :as => :deal_results
   match "/beta" => "pages#beta"
+  get "help" => "pages#help", :as => :help
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
