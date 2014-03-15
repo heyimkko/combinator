@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trossr - Travel Hacking</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic|Playfair+Display|Oswald:400,700,300|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Lato:300,400,700,900,300italic|Playfair+Display|Oswald:400,700,300|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+  <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
   <%= yield %>
-  
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <%= javascript_include_tag "application" %>
 
 </body>
 </html>

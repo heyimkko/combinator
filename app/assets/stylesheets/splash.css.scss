@@ -1,24 +1,27 @@
 #landing {
-  font-family: 'Playfair Display';
+  font-family: 'Source Sans Pro';
   color: #E9E9EB;
-  background: url('http://i.imgur.com/frJI8ws.jpg') no-repeat center; 
+  background: url('http://i.imgur.com/s81AYQu.jpg') fixed no-repeat; 
+  background-size: cover;
+  width: 100%;
   min-height: 768px;
   height: 100%;
-  margin-bottom: 40px;
 
   #hero {
-    padding: 20% 0 5% 0;
+    padding: 20% 0 0% 0;
     text-align: center;
 
     h1, h2 {
       font-family: 'PT Sans Narrow';
-      color: #fff;
+      color: #fefefe;
       /*text-shadow: 0px 1px 1px #000;*/
       text-shadow: -1px 1px 1px rgba(0, 0, 0, 1);
     }
 
     h2 {
-      padding-top: 20px;
+      color: #E9E9EB;
+      font-family: 'Source Sans Pro';
+      padding-top: 10px;
       font-weight: 300;
     }
   }
@@ -34,16 +37,25 @@
     }
 
     h2 {
+      font-weight: 300;
       color: #E9E9EB;
+    }
+
+    h3 {
+      padding-top: 10%;
+      font-weight: 600;
     }
   }
 
   #input {
-    width: 30%;
+    display: inline;
+    width: 40%;
     max-width: 636px;
+    height: 50px;
     padding: 10px;
     font-size: 1.4em;
     border: 0;
+    font-family: 'Source Sans Pro';
   }
 
   input[type=submit] {
@@ -55,7 +67,7 @@
     border-radius: 5px;
     display: inline-block;
     /*width: 20%;*/
-    height: auto;
+    height: 50px;
     text-align: center;
     text-shadow: 0 -1px 1px #FF5000;
     color: #fff;
@@ -87,12 +99,37 @@
   }
 }
 
-#how {
+.block {
   display: block;
-  padding-bottom: 70px;
+  padding: 40px 0 70px 0;
+}
+
+#what {
+  background-color: #F39060;
+  width: 100%;
 
   h1 {
-    font-family: 'Playfair Display';
+    color: #000;
+    font-family: 'PT Sans Narrow';
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #111;
+  }
+}
+
+#how {
+  background-color: #f5f5f5;
+
+  h1 {
+    font-family: 'PT Sans Narrow';
+    color: #222;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #474747;
   }
 }
 

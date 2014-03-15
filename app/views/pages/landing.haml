@@ -1,38 +1,32 @@
 #landing
   .container
-    #hero
+    #hero.row
       %h1
-        Combine flight deals with hotel getaway packages.
-      %h2
-        Trossr is the spontaneous person's travel-hack tool 
-        %br
-        Go on vacation this weekend at 60% the normal cost.
-
+        Vacation this weekend for 60% the normal cost
+      %h2 When do you want to go?
     #query
-      %h2
-        Let's start your adventure. Choose a date:
-      = form_tag('/beta')
-      = text_field_tag "date", nil, placeholder: "mm/dd (ex: 03/15)", id: "input"
-      = submit_tag "Go!"
+      .row
+        = form_tag('/beta')
+        = text_field_tag "date", nil, placeholder: "mm/dd (ex: 03/15)", id: "input"
+        = submit_tag "Find Flight + Hotel"
+      %br
+      %h2 Trossr is a travel-hack for spontaneous adventurers
       #asterisk
       / *Currently only supporting SFO and LAX departures.
-      %h3= link_to "How does this work?", "#", id: "scroll_to_how"
-.results
-#how
+      %h3= link_to "Read more", "#", id: "scroll_to_how"
+.results.row
+#what.block
   .container
-    %h1 How does this work?
-    %p
-      = succeed "," do
-        %strong Trossr is a tool that combines awesome LivingSocial hotel packages with guaranteed low-price flights
-      delivering to you, the spontaneous adventurer, a heavily discounted vacation package.
+    %h1.row What is Trossr?
+    %p.row Trossr is a travel-hacking tool that combines awesome LivingSocial hotel packages with guaranteed low-price flights. The result is always a heavily-discounted vacation package!
     %br
-    %p 
-      We know every flight site likes to boast about "low prices", but Trossr uses proprietary technology to find the prices the 
-      %strong.italics airline companies don't want you knowing about
-      (don't worry - it's perfectly legal!). We call this "flight shorcutting". Every flight found on Trossr is a guaranteed shortcut flight, and thus a guaranteed low-price flight.
-    %br
-    %p
-      So go ahead and try a search. Sorry, but we're only supporting San Francisco departures for now!
+#how.block
+  .container
+    %h1.row How do you get such low prices?
+    %p.row
+      Every flight site boasts about "low prices", but Trossr uses proprietary technology to find the prices even the 
+      %span.strong.italics airline companies don't want you knowing about
+      (don't worry - it's perfectly legal!). We call this "shortcut flying". Every flight found on Trossr is a  shortcut flight, and thus a guaranteed low-price flight.
 
 :javascript
   $("#scroll_to_how").click(function() {
