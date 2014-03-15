@@ -16,5 +16,4 @@
 
 config/initializers/aaa_secrets.rb
 config/initializers/secret_token.rb
-config/environments/
 .DS_Store
